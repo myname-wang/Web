@@ -1,0 +1,523 @@
+/* ===== 元气少女缘结神主题样式 ===== */
+
+:root {
+    --sakura-pink: #ffb7c5;
+    --sakura-dark: #ff6b9d;
+    --sakura-light: #ffe4e9;
+    --miko-red: #d63031;
+    --shrine-red: #c0392b;
+    --gold-accent: #f9ca24;
+    --text-dark: #2d3436;
+    --text-light: #636e72;
+}
+
+body {
+    font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+    color: var(--text-dark);
+    background-color: #fff9fa;
+}
+
+.kamisama-nav {
+    background: linear-gradient(135deg, var(--sakura-dark) 0%, var(--miko-red) 100%);
+    box-shadow: 0 2px 15px rgba(255, 107, 157, 0.3);
+}
+
+.kamisama-nav .navbar-brand {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.kamisama-nav .nav-link {
+    position: relative;
+    padding: 0.5rem 1rem !important;
+    transition: all 0.3s;
+}
+
+.kamisama-nav .nav-link::after {
+    content: '🌸';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.kamisama-nav .nav-link:hover::after,
+.kamisama-nav .nav-link.active::after {
+    opacity: 1;
+}
+
+.hero-section {
+    margin-top: 70px;
+}
+
+.hero-section .carousel-item {
+    height: calc(100vh - 70px);
+    min-height: 400px;
+}
+
+.hero-section .carousel-item img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-section .carousel-caption {
+    background: rgba(255, 107, 157, 0.4);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 15px;
+    bottom: 20%;
+}
+
+.sakura-title {
+    color: var(--sakura-dark);
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+}
+
+.text-pink {
+    color: var(--sakura-dark);
+}
+
+.intro-section {
+    background: linear-gradient(180deg, #fff9fa 0%, #ffeef2 100%);
+}
+
+.anime-poster img {
+    border: 5px solid white;
+    box-shadow: 0 10px 30px rgba(255, 107, 157, 0.3);
+}
+
+.badge-sakura {
+    background: linear-gradient(135deg, var(--sakura-pink) 0%, var(--sakura-dark) 100%);
+    color: white;
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.bg-sakura {
+    background-color: var(--sakura-light);
+}
+
+.bg-sakura-gradient {
+    background: linear-gradient(135deg, var(--sakura-pink) 0%, var(--sakura-dark) 100%);
+}
+
+.character-card {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: white;
+    box-shadow: 0 5px 20px rgba(255, 107, 157, 0.15);
+}
+
+.character-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(255, 107, 157, 0.3);
+}
+
+.character-card .card-img-top {
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+    object-fit: contain;
+    display: block;
+    background-color: #fff9fa;
+}
+
+.character-card .card-title {
+    color: var(--sakura-dark);
+    font-weight: bold;
+}
+
+.char-detail-card {
+    transition: all 0.3s;
+}
+
+.char-detail-card:hover {
+    box-shadow: 0 15px 35px rgba(255, 107, 157, 0.25) !important;
+    transform: translateY(-5px);
+}
+
+.char-detail-card img {
+    object-fit: contain !important;
+    background-color: #fff9fa;
+    width: 100%;
+    height: auto !important;
+    max-height: 400px;
+}
+
+.info-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(255, 107, 157, 0.15);
+    transition: all 0.3s;
+}
+
+.info-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(255, 107, 157, 0.25);
+}
+
+.info-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.info-box h4 {
+    color: var(--sakura-dark);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.page-hero {
+    height: 400px;
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.story-hero {
+    background: linear-gradient(135deg, #ffb7c5 0%, #ff6b9d 50%, #c0392b 100%);
+}
+
+.characters-hero {
+    background: linear-gradient(135deg, #fd79a8 0%, #e84393 50%, #c44569 100%);
+}
+
+.arcs-hero {
+    background: linear-gradient(135deg, #fab1a0 0%, #e17055 50%, #d63031 100%);
+}
+
+.gallery-hero {
+    background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 50%, #fd79a8 100%);
+}
+
+.guestbook-hero {
+    background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 50%, #fd79a8 100%);
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes sakuraFall {
+    0% {
+        transform: translateY(-10px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.story-content {
+    margin-top: -50px;
+    position: relative;
+    z-index: 10;
+}
+
+.story-section {
+    margin-bottom: 3rem;
+}
+
+.story-section h3 {
+    border-bottom: 2px solid var(--sakura-pink);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.feature-card {
+    background: linear-gradient(135deg, #fff9fa 0%, #ffe4e9 100%);
+    padding: 1.5rem;
+    border-radius: 15px;
+    height: 100%;
+    transition: all 0.3s;
+    border: 1px solid var(--sakura-light);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255, 107, 157, 0.2);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.feature-card h4 {
+    color: var(--sakura-dark);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.table-sakura {
+    background-color: var(--sakura-light);
+    color: var(--sakura-dark);
+    font-weight: bold;
+    width: 30%;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 100px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, var(--sakura-pink) 0%, var(--sakura-dark) 100%);
+    border-radius: 2px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--sakura-pink);
+    flex-shrink: 0;
+    margin-right: 2rem;
+    z-index: 5;
+    background: white;
+    position: relative;
+}
+
+.timeline-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.timeline-content {
+    flex: 1;
+    background: white;
+}
+
+.timeline-content h3 {
+    color: var(--sakura-dark);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content ul {
+    margin-bottom: 0;
+    padding-left: 1.2rem;
+}
+
+.gallery-container .gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 183, 197, 0.9) 0%, rgba(255, 107, 157, 0.9) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.overlay-icon {
+    font-size: 3rem;
+    animation: float 2s ease-in-out infinite;
+}
+
+.guestbook-form {
+    margin-top: -50px;
+    position: relative;
+    z-index: 10;
+}
+
+.btn-sakura {
+    background: linear-gradient(135deg, var(--sakura-pink) 0%, var(--sakura-dark) 100%);
+    color: white;
+    border: none;
+    padding: 0.8rem 2.5rem;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(255, 107, 157, 0.3);
+}
+
+.btn-sakura:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 107, 157, 0.4);
+    color: white;
+}
+
+.message-card {
+    transition: all 0.3s;
+    border-left: 4px solid var(--sakura-dark);
+}
+
+.message-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 10px 25px rgba(255, 107, 157, 0.2) !important;
+}
+
+.quote-card {
+    position: relative;
+}
+
+.quote-card p.lead {
+    font-style: italic;
+    font-size: 1.3rem;
+    line-height: 2;
+}
+
+.kamisama-footer {
+    background: linear-gradient(135deg, var(--sakura-dark) 0%, var(--miko-red) 100%);
+    margin-top: 3rem;
+}
+
+.sakura-petal {
+    position: fixed;
+    top: -20px;
+    font-size: 20px;
+    pointer-events: none;
+    z-index: 9999;
+    animation: sakuraFall linear forwards;
+}
+
+.form-control:focus {
+    border-color: var(--sakura-pink);
+    box-shadow: 0 0 0 0.25rem rgba(255, 107, 157, 0.25);
+}
+
+.form-check-input:checked {
+    background-color: var(--sakura-dark);
+    border-color: var(--sakura-dark);
+}
+
+.form-check-input:focus {
+    border-color: var(--sakura-pink);
+    box-shadow: 0 0 0 0.25rem rgba(255, 107, 157, 0.25);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.anime-poster img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.char-detail-card img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.timeline-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--sakura-light); }
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--sakura-pink) 0%, var(--sakura-dark) 100%);
+    border-radius: 5px;
+}
+
+@media (max-width: 992px) {
+    .timeline::before { left: 50px; }
+    .timeline-img { width: 80px; height: 80px; margin-right: 1.5rem; }
+}
+
+@media (max-width: 768px) {
+    .hero-section .carousel-item { height: 60vh; min-height: 300px; }
+    .hero-section .carousel-caption { padding: 1rem; bottom: 10%; }
+    .hero-section .carousel-caption h1 { font-size: 1.5rem; }
+    .page-hero { height: 250px; }
+    .page-hero h1 { font-size: 2rem !important; }
+    .timeline::before { left: 30px; }
+    .timeline-img { width: 60px; height: 60px; margin-right: 1rem; }
+    .timeline-content { padding: 1.5rem !important; }
+    .gallery-item img { height: 180px; }
+}
+
+@media (max-width: 576px) {
+    .sakura-title { font-size: 1.8rem; }
+    .character-card .card-img-top { height: 220px; }
+}
